@@ -1,7 +1,8 @@
 .list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px; /* відстань між картками */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -19,12 +20,12 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 180px;
+  width: 260px;
 
   cursor: pointer;
 
-  /* Анімація появи */
   opacity: 0;
-  transform: translateY(15px); /* тільки вниз, щоб не заїжджали */
+  transform: translateY(15px);
   animation: fadeInUp 0.4s ease forwards;
   transition:
     transform 0.15s ease,

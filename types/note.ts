@@ -9,3 +9,16 @@ export interface Note {
 
 export type NoteId = Note["id"];
 export type Tag = Note["tag"];
+export type SortBy = "title" | "createdAt" | "updatedAt";
+
+export const CATEGORIES = [
+  "All",
+  "Todo",
+  "Work",
+  "Personal",
+  "Meeting",
+  "Shopping",
+] as const;
+
+export type Category = (typeof CATEGORIES)[number];
+export type CategoryNoAll = Exclude<Category, "All">;
